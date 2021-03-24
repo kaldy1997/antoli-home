@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+.o-row{
+    display: inline-flex;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    justify-self: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    padding: 0 2rem;
+}
+.header{
+    width: 95%;
+    position: fixed;
+    height: 220px;
+    padding: 0 2rem;
+    background-image: url(./assets/img/cabecera.png);
+
+}
+
+
+.menu{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+
+.home{
+    background-image: url(./assets/img/fondo.png);
+    height: 100vh;
+}
