@@ -11,13 +11,13 @@ const routes: Routes = [
   },
   {
     path: 'quienes-somos', component: QuienesSomosComponent
+  },
+  {
+    path: 'galeria', component: GaleriaComponent
+  },
+  {
+    path: 'contacto', component: ContactoComponent
   }
-  // {
-  //   path: 'galeria', component: GaleriaComponent
-  // },
-  // {
-  //   path: 'contacto', component: ContactoComponent
-  // },
 ];
 
 @NgModule({

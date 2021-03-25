@@ -1,1 +1,10 @@
-<p>galeria works!</p>
+<ng-container *ngFor="let url of imagesUrl; let i = index">
+    <img [src]="url" (click)="onClickImg(i)">
+</ng-container>
+
+<div *ngIf="showModal">
+    <div (click)="closeImg()">X</div>
+    <div (click)="prevImg()"><</div>
+    <img [src]="urlImgSelected">
+    <div (click)="nextImg()">></div>
+</div>
