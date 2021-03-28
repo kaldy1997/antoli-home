@@ -3,8 +3,8 @@
 </ng-container>
 
 <div *ngIf="showModal">
-    <div (click)="closeImg()">X</div>
-    <div (click)="prevImg()"><</div>
+    <img src="assets/img/icon-cross.png" (click)="closeImg()">
+    <img src="assets/img/icon-left-arrow.png" (click)="prevImg()">
     <img [src]="urlImgSelected">
-    <div (click)="nextImg()">></div>
+    <img src="assets/img/icon-right-arrow.png" (click)="nextImg()">
 </div>
