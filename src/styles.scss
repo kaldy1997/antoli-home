@@ -47,10 +47,19 @@ body{
 
     &_links{
         cursor: pointer;
+        width: 10%;
     }
 
+    &_left{
+        display: inline-flex;
+        justify-content: space-between;
+        width: 40%;
+    }
+
+ 
     &__right{
-        display: flex;
+        display: inline-flex;
+        width: 40%;
         h3{
             cursor: default;
         }
@@ -93,7 +102,7 @@ body{
     height: 100vh;
     margin-top: -215px;
     background-color: $colorPrimary;
-    display: flex;
+    display: inline-flex;
 
     p{
         font-family: Arial;
@@ -130,6 +139,9 @@ body{
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+    &--pueblo{
+        width: 100%;
     }
 }
 
