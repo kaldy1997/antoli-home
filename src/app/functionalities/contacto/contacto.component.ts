@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as Mapboxgl from 'mapbox-gl';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-contacto',
@@ -6,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
+  private mapa: Mapboxgl.Map;
+
   constructor() { }
 
   ngOnInit(): void {
+    Mapboxgl.accessToken = environment.mapboxKey;
+    this.mapa = new Mapboxgl.Map({
+      container: 'mapa',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-0.51548, 38.779445],
+      zoom: 18
+    });
+
+    const marker1 = new Mapboxgl.Marker()
+    .setLngLat([-0.51548, 38.779445])
+    .addTo(this.mapa);
   }
 
   public openWindow(): void {
