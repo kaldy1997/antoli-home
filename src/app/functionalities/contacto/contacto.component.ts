@@ -10,24 +10,29 @@ export class ContactoComponent implements OnInit {
 
   private mapa: Mapboxgl.Map;
 
+  private readonly COORDENADAS = [-0.5154, 38.77942];
+
   constructor() { }
 
   ngOnInit(): void {
-    Mapboxgl.accessToken = environment.mapboxKey;
-    this.mapa = new Mapboxgl.Map({
-      container: 'mapa',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-0.51548, 38.779445],
-      zoom: 18
-    });
-
-    const marker1 = new Mapboxgl.Marker()
-    .setLngLat([-0.51548, 38.779445])
-    .addTo(this.mapa);
+    this.setMap();
   }
 
   public openWindow(): void {
     window.open('http://www.costablanca.org/Esp/Descubre_la_Costa_Blanca/La_Costa_Blanca/Paginas/Agres.aspx', '_blank');
+  }
+
+  private setMap(): void {
+    Mapboxgl.accessToken = environment.mapboxKey;
+    this.mapa = new Mapboxgl.Map({
+      container: 'mapa',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: this.COORDENADAS,
+      zoom: 18
+    });
+
+    new Mapboxgl.Marker().setLngLat(this.COORDENADAS).addTo(this.mapa);
+    this.mapa.addControl(new Mapboxgl.NavigationControl());
   }
 
 }
