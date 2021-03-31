@@ -14,7 +14,9 @@ $colorPrimary : #b9c7ad;
 body{
     font-family: Arial;
 }
-
+.text-light{
+    font-size: 1.1rem;
+}
 .header{
     position: relative;
     height: 215px;
@@ -145,6 +147,79 @@ body{
     }
 }
 
+.galeria{
+    width: 100%;
+    margin-top: -40px;
+    &__img{
+        width: calc(25% - 2rem);
+        height: 300px;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+        object-fit: cover;
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.contacto{
+    display: flex;
+    &__img{
+        &--montse{
+            width: 35%;
+            margin-top: -100px;
+        }
+        &--icon{
+            height: 60px;
+            margin-right: 1rem;
+        }
+    }
+    
+    &__left{
+        width: 70%;
+
+        &_info{
+        
+            display: inline-flex;
+            &--text{
+                margin-left: 2rem;
+                margin-right: 4rem;
+                font-size: 2rem;
+            }
+
+            &--telf{
+                display: inline-flex;
+                margin-top: 1rem;
+                font-family: Arial;
+                font-size: 1.5rem;
+                color: $colorPrimary;
+            }
+        }
+
+        &_adress{
+            margin-right: 3rem;
+            &--text{
+                font-family: Arial;
+                font-size: 1.1rem;
+                color: $colorPrimary;
+            }
+            &--container{
+                display: inline-flex;
+                width: 100%;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            &--icon{
+                margin-left: 1rem;
+            }
+        }
+        
+    }
+
+    &__right{
+        width: 30;
+    }
+}
 
 @media only screen and (min-width: 2000px) {
     .header{
@@ -153,6 +228,8 @@ body{
 }
 
 #mapa {
-    width: 750px;
-    height: 750px;
+    width: 100%;
+    height: 500px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

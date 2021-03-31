@@ -1,6 +1,8 @@
-<ng-container *ngFor="let url of imagesUrl; let i = index">
-    <img [src]="url" (click)="onClickImg(i)">
-</ng-container>
+<div class="galeria" >
+    <ng-container *ngFor="let url of imagesUrl; let i = index">
+        <img class="galeria__img" [src]="url" (click)="onClickImg(i)">
+    </ng-container>
+</div>
 
 <div *ngIf="showModal">
     <img src="assets/img/icon-cross.png" (click)="closeImg()">

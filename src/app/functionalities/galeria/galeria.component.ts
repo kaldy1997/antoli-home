@@ -14,15 +14,15 @@ export class GaleriaComponent implements OnInit {
 
   constructor() {
     this.imagesUrl = [
-      'assets/img/galeria_1.jpeg',
-      'assets/img/galeria_2.jpeg',
-      'assets/img/galeria_3.jpeg',
+      'assets/img/galeria_1.jpg',
+      'assets/img/galeria_2.jpg',
+      'assets/img/galeria_3.jpg',
       'assets/img/galeria_4.jpg',
-      'assets/img/galeria_5.jpg',
-      'assets/img/galeria_6.jpg',
+      'assets/img/galeria_5.jpeg',
+      'assets/img/galeria_6.jpeg',
       'assets/img/galeria_7.jpg',
       'assets/img/galeria_8.jpg',
-      'assets/img/galeria_9.jpg',
+      'assets/img/galeria_9.jpeg',
       'assets/img/galeria_10.jpg',
       'assets/img/galeria_11.jpg',
       'assets/img/galeria_12.jpg'
