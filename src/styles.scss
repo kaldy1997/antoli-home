@@ -11,12 +11,21 @@ $colorPrimary : #b9c7ad;
     padding: 0;
     margin: 0;
 }
+
+button{
+    &:focus{
+        outline: none;
+    }
+}
+
 body{
     font-family: Arial;
 }
+
 .text-light{
     font-size: 1.1rem;
 }
+
 .header{
     position: fixed;
     width: 100%;
@@ -121,7 +130,7 @@ body{
         }
     }
     &__section{
-        padding-top: 12rem;
+        padding-top: 11rem;
         width: calc(40%);
         
         &-left{
@@ -144,9 +153,10 @@ body{
         font-size: 3rem;
         margin-bottom: 1.5rem;
         margin-top: -1rem;
+        
     }
     &--flor{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         right: 0;
     }
@@ -193,7 +203,7 @@ body{
             &--text{
                 margin-left: 2rem;
                 margin-right: 4rem;
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
 
             &--telf{
@@ -226,7 +236,47 @@ body{
     }
 
     &__right{
-        width: 30;
+        width: 30%;
+        border: solid 4px $colorPrimary;
+        border-radius: 40px;
+        height: fit-content;
+        padding: 1.5rem;
+        margin-top: -2rem;
+
+        &--section{
+            width: 100%;
+
+            p{
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                font-family: Arial;
+            }
+
+            &-title{
+                text-align: center;
+                font-family: Arial;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                color: $colorPrimary;
+                
+            }
+            &-container-button{
+                display: flex;
+                justify-content: center;
+            }
+
+            &-button{
+                text-align: center;
+                padding: 10px 35px 10px 35px;
+                border-radius: 25px 25px 25px 25px;
+                border-width: 0;
+                font-weight: bold;
+                font-size: 0.8rem;
+                background-color: $colorPrimary;
+                color: white;
+                cursor: pointer;
+            }
+        }
     }
 }
 
