@@ -177,12 +177,62 @@ body{
         &:nth-child(4n) {
             margin-right: 0;
         }
+
+
+        &--icon{
+            height: 60px;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
     }
+
+    &__modal{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        min-height: 100vh;
+        background: rgba($colorPrimary,0.9);
+        margin-left: -2rem;
+
+        &--close{
+            display: inline-flex;
+            width: 100%;
+            justify-content: flex-end;
+            
+        }
+
+        &--body{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            &--icon{
+                height: 60px;
+                margin-right: 1rem;
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+
+            &--arrow{
+                width: 10%;
+                display: inline-flex;
+                justify-content: center;
+            }
+        }
+
+        &--img{
+            height: 85vh;
+            width: 80%;
+            object-fit: contain;
+        }
+    }
+
 }
 
 .contacto{
     display: flex;
     padding-top: 215px;
+
     &__img{
         &--montse{
             width: 35%;

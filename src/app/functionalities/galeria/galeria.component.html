@@ -4,9 +4,17 @@
     </ng-container>
 </div>
 
-<div *ngIf="showModal">
-    <img src="assets/img/icon-cross.png" (click)="closeImg()">
-    <img src="assets/img/icon-left-arrow.png" (click)="prevImg()">
-    <img [src]="urlImgSelected">
-    <img src="assets/img/icon-right-arrow.png" (click)="nextImg()">
+<div class="galeria__modal" *ngIf="showModal">
+    <div class="galeria__modal--close">
+        <img class="galeria__img--icon " src="assets/img/icon-cross.png" (click)="closeImg()">
+    </div>
+    <div class="galeria__modal--body">
+        <div class="galeria__modal--body--arrow">
+            <img class="galeria__modal--body--icon" src="assets/img/icon-left-arrow.png" (click)="prevImg()">
+        </div>
+        <img class="galeria__modal--img" [src]="urlImgSelected">
+        <div class="galeria__modal--body--arrow">
+            <img class="galeria__modal--body--icon" src="assets/img/icon-right-arrow.png" (click)="nextImg()">
+        </div>
+    </div>
 </div>
