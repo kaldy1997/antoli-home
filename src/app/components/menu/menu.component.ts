@@ -15,7 +15,6 @@ export class MenuComponent implements OnInit {
     router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
           this.pageActive = event.url;
-          console.log('clau is event', event, event.url);
         }
     });
   }
