@@ -71,6 +71,10 @@ body{
         display: inline-flex;
         justify-content: space-around;
         width: 45%;
+        
+        &_selected{
+            font-weight: bold !important;
+        }
     }
 
  

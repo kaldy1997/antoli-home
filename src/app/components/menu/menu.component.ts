@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -6,13 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  pageActive: string;
 
-  ngOnInit(): void {
+  constructor(
+    router: Router
+  ) {
+    router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          this.pageActive = event.url;
+          console.log('clau is event', event, event.url);
+        }
+    });
   }
 
-  public navigate(ruta): void {
-    // this.router.navigate()
+  ngOnInit(): void {
   }
 
 }
