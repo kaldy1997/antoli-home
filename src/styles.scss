@@ -6,6 +6,7 @@
  }
 
 $colorPrimary : #b9c7ad;
+$colorText : #54524f;
 
 *{
     padding: 0;
@@ -24,6 +25,38 @@ body{
 
 .text-light{
     font-size: 1.1rem;
+}
+
+.container-shadow{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    & .shadow-text {
+        position: relative;
+        z-index: -1;
+    }
+
+    & .shadow {
+        background: $colorPrimary;
+        height: 15px;
+        border-radius: 10px;
+        margin-top: -15px;
+        width: 80%;
+        left: 10%;
+        position: relative;
+        z-index: -2;
+
+        &--full{
+        background: $colorPrimary;
+        height: 15px;
+        border-radius: 10px;
+        margin-top: -15px;
+        width: 100%;
+        position: relative;
+        z-index: -2;
+        }
+    }
 }
 
 .header{
@@ -56,8 +89,14 @@ body{
     h3{
         cursor: pointer;
         font-weight: normal;
+
+        &.menu_left_selected{
+            font-weight: bold ;
+        }
+    
     }
 
+    
     &_links{
         cursor: pointer;
         width: 10%;
@@ -71,10 +110,6 @@ body{
         display: inline-flex;
         justify-content: space-around;
         width: 45%;
-        
-        &_selected{
-            font-weight: bold !important;
-        }
     }
 
  
@@ -83,7 +118,9 @@ body{
         width: 45%;
         justify-content: center;
         h3{
+            white-space: pre;
             cursor: default;
+            display: inline-flex;
         }
     }
 }
@@ -93,7 +130,7 @@ body{
     background-image: url(./assets/img/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 
     &__text{
         color: white;
@@ -116,6 +153,11 @@ body{
         background-color: white;
         color: $colorPrimary;
         cursor: pointer;
+
+        &:hover{
+        background-color: $colorPrimary;
+        color: white ;
+        }
     }
 }
 
@@ -258,6 +300,7 @@ body{
                 margin-left: 2rem;
                 margin-right: 4rem;
                 font-size: 1.6rem;
+                letter-spacing: 2px;
             }
 
             &--telf{
@@ -265,7 +308,7 @@ body{
                 margin-top: 1rem;
                 font-family: Arial;
                 font-size: 1.5rem;
-                color: $colorPrimary;
+                color: $colorText;
             }
         }
 
@@ -274,7 +317,7 @@ body{
             &--text{
                 font-family: Arial;
                 font-size: 1.1rem;
-                color: $colorPrimary;
+                color: $colorText;
             }
             &--container{
                 display: inline-flex;
@@ -310,9 +353,10 @@ body{
                 text-align: center;
                 font-family: Arial;
                 margin-bottom: 1rem;
+                display: inline-block;
                 font-size: 1.2rem;
-                color: $colorPrimary;
-                
+                color: $colorText;
+                width: 100%;
             }
             &-container-button{
                 display: flex;
@@ -329,6 +373,10 @@ body{
                 background-color: $colorPrimary;
                 color: white;
                 cursor: pointer;
+
+                &:hover{
+                    color: $colorText;
+                }
             }
         }
     }
