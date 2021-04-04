@@ -1,0 +1,20 @@
+<div class="galeria" >
+    <ng-container *ngFor="let url of imagesUrl; let i = index">
+        <img class="galeria__img" [src]="url" (click)="onClickImg(i)">
+    </ng-container>
+</div>
+
+<div class="galeria__modal" *ngIf="showModal">
+    <div class="galeria__modal--close">
+        <img class="galeria__img--icon " src="assets/img/icon-cross.png" (click)="closeImg()">
+    </div>
+    <div class="galeria__modal--body">
+        <div class="galeria__modal--body--arrow">
+            <img class="galeria__modal--body--icon" src="assets/img/icon-left-arrow.png" (click)="prevImg()">
+        </div>
+        <img class="galeria__modal--img" [src]="urlImgSelected">
+        <div class="galeria__modal--body--arrow">
+            <img class="galeria__modal--body--icon" src="assets/img/icon-right-arrow.png" (click)="nextImg()">
+        </div>
+    </div>
+</div>
