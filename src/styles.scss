@@ -39,9 +39,9 @@ body{
 
     & .shadow {
         background: $colorPrimary;
-        height: 15px;
+        height: 10px;
         border-radius: 10px;
-        margin-top: -15px;
+        margin-top: -10px;
         width: 80%;
         left: 10%;
         position: relative;
@@ -49,9 +49,9 @@ body{
 
         &--full{
         background: $colorPrimary;
-        height: 15px;
+        height: 10px;
         border-radius: 10px;
-        margin-top: -15px;
+        margin-top: -12px;
         width: 100%;
         position: relative;
         z-index: -2;
