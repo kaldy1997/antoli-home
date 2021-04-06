@@ -1,0 +1,229 @@
+.contacto{
+    display: flex;
+    padding-top: 215px;
+
+    &__img{
+        &--montse{
+            width: 35%;
+            margin-top: -100px;
+        }
+        &--icon{
+            height: 60px;
+            margin-right: 1rem;
+        }
+    }
+    
+    &__left{
+        width: 70%;
+
+        &_info{
+        
+            display: inline-flex;
+            &--text{
+                margin-left: 2rem;
+                font-size: 1.6rem;
+            }
+
+            &--telf{
+                display: inline-flex;
+                margin-top: 1rem;
+                font-family: Arial;
+                font-size: 1.5rem;
+                color: $colorText;
+            }
+        }
+
+        &_adress{
+            margin-right: 3rem;
+            &--text{
+                font-family: Arial;
+                font-size: 1.1rem;
+                color: $colorText;
+            }
+            &--container{
+                display: inline-flex;
+                width: 100%;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            &--icon{
+                margin-left: 1rem;
+            }
+        }
+        
+    }
+
+    &__right{
+        width: 30%;
+        border: solid 4px $colorPrimary;
+        border-radius: 40px;
+        height: fit-content;
+        padding: 1.5rem;
+        margin-top: -2rem;
+
+        &--section{
+            width: 100%;
+
+            p{
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                font-family: Arial;
+            }
+
+            &-title{
+                text-align: center;
+                font-family: Arial;
+                margin-bottom: 1rem;
+                display: inline-block;
+                font-size: 1.2rem;
+                color: $colorText;
+                width: 100%;
+            }
+            &-container-button{
+                display: flex;
+                justify-content: center;
+            }
+
+            &-button{
+                text-align: center;
+                padding: 10px 35px 10px 35px;
+                border-radius: 25px 25px 25px 25px;
+                border-width: 0;
+                font-weight: bold;
+                font-size: 0.8rem;
+                background-color: $colorPrimary;
+                color: white;
+                cursor: pointer;
+
+                &:hover{
+                    color: $colorText;
+                }
+            }
+        }
+    }
+}
+
+
+#mapa {
+    width: 100%;
+    height: 500px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    z-index: -1;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .contacto{
+        display: initial;
+
+        &__img{
+            &--montse{
+                margin-top: -55px;
+            }
+            &--icon{
+                height: 60px;
+                margin-right: 1rem;
+            }
+        }
+        
+        &__left{
+            width: 100%;
+            padding-top: 10rem;
+
+            &_info{
+                &--text{
+                    margin-left: 1rem;
+                    margin-right: 0;
+                    font-size: 1.2rem;
+                    letter-spacing: 2px;
+                    width: 100%;
+                }
+
+                &--telf{
+                    font-size: 1rem;
+                }
+            }
+
+            &_adress{
+                margin-right: 0;
+                width: 100%;
+                &--text{
+                    font-size: 1rem;
+                    text-align: justify;
+                }
+                &--container{
+                    width: 100%;
+                    align-items: initial;
+                    margin-top: 1rem;
+                }
+                &--icon{
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &__right{
+            width: calc(100% - 3rem) ;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 485px) {
+    .contacto{
+        display: initial;
+
+        &__img{
+            &--montse{
+                width: 100%;
+                margin-top: -55px;
+            }
+            &--icon{
+                height: 60px;
+                margin-right: 1rem;
+            }
+        }
+        
+        &__left{
+            width: 100%;
+            padding-top: 10rem;
+
+            &_info{
+                display: initial;
+                &--text{
+                    margin-left: 1rem;
+                    margin-right: 0;
+                    font-size: 1.4rem;
+                    letter-spacing: 2px;
+                    width: 100%;
+                }
+            }
+
+            &_adress{
+                margin-right: 0;
+                width: 100%;
+                &--text{
+                    font-size: 1rem;
+                    text-align: justify;
+                }
+                &--container{
+                    width: 100%;
+                    align-items: initial;
+                    margin-top: 1rem;
+                }
+                &--icon{
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &__right{
+            width: calc(100% - 3rem) ;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+}
