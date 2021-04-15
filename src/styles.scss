@@ -24,7 +24,7 @@ body{
 }
 
 .text-light{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .container-shadow{
@@ -59,6 +59,8 @@ body{
     }
 }
 
+
+
 .header{
     position: fixed;
     width: 100%;
@@ -75,322 +77,20 @@ body{
     font-family: 'SignPainter';
 }
 
-.menu{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1rem;
-
-    & :focus{
-        outline: none;
-    }
-
-    h3{
-        cursor: pointer;
-        font-weight: normal;
-
-        &.menu_left_selected{
-            font-weight: bold ;
-        }
-    
-    }
-
-    
-    &_links{
-        cursor: pointer;
-        width: 10%;
-        text-align: center;
-        img{
-            max-height: 15vh;
-        }
-    }
-
-    &_left{
-        display: inline-flex;
-        justify-content: space-around;
-        width: 45%;
-    }
-
- 
-    &__right{
-        display: inline-flex;
-        width: 45%;
-        justify-content: center;
-        h3{
-            white-space: pre;
-            cursor: default;
-            display: inline-flex;
-        }
+@media only screen and (max-width: 1250px) {
+    .body{
+        padding: 0 1rem;
     }
 }
 
-
-.home{
-    background-image: url(./assets/img/fondo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-
-    &__text{
-        color: white;
-        margin-left: 5rem;
-        font-size: 3rem;
-        text-shadow: 0px 3px 2px rgb(0 0 0 / 50%);
-        padding-top: 15%;
-        h1{
-            font-weight: normal;
-            cursor: default;
-        }
-    }
-
-    &__button{
-        padding: 10px 35px 10px 35px;
-        border-radius: 25px 25px 25px 25px;
-        border-width: 0;
-        font-weight: bold;
-        font-size: 0.8rem;
-        background-color: white;
-        color: $colorPrimary;
-        cursor: pointer;
-
-        &:hover{
-        background-color: $colorPrimary;
-        color: white ;
-        }
+@media only screen and (max-width: 485px) {
+    .body{
+        padding: 0 0.5rem;
     }
 }
 
-.quienes-somos{
-    min-height: 100vh;
-    background-color: $colorPrimary;
-    display: inline-flex;
-
-    p{
-        font-family: Arial;
-        margin-bottom: 1.5rem;
-        letter-spacing: 1px;
-        line-height: 1.2;
-        &.no-margin-bot{
-            margin-bottom: 0;
-        }
-    }
-    &__section{
-        padding-top: 11rem;
-        width: calc(40%);
-        
-        &-left{
-            margin-left: 7.5%;
-            p{
-                line-height: 1.3;
-            }
-        }
-
-        &-right{
-            margin-left: 5%;
-            margin-right: 7.5%;
-        }
-    }
-
-    &__title{
-        text-shadow: 0px 3px 2px rgb(0 0 0 / 50%);
-        color: white;
-        font-weight: normal;
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
-        margin-top: -1rem;
-        
-    }
-    &--flor{
-        position: fixed;
-        bottom: 0;
-        right: 0;
-    }
-    &--pueblo{
-        width: 100%;
-    }
-}
-
-.galeria{
-    width: 100%;
-    padding-top: 150px;
-    &__img{
-        width: calc(25% - 2rem);
-        height: 300px;
-        margin-bottom: 2rem;
-        margin-right: 2rem;
-        object-fit: cover;
-        &:nth-child(4n) {
-            margin-right: 0;
-        }
-
-
-        &--icon{
-            height: 60px;
-            margin-right: 1rem;
-            cursor: pointer;
-        }
-    }
-
-    &__modal{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        min-height: 100vh;
-        background: rgba($colorPrimary,0.9);
-        margin-left: -2rem;
-
-        &--close{
-            display: inline-flex;
-            width: 100%;
-            justify-content: flex-end;
-            
-        }
-
-        &--body{
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            &--icon{
-                height: 60px;
-                margin-right: 1rem;
-                margin-left: 1rem;
-                cursor: pointer;
-            }
-
-            &--arrow{
-                width: 10%;
-                display: inline-flex;
-                justify-content: center;
-            }
-        }
-
-        &--img{
-            height: 85vh;
-            width: 80%;
-            object-fit: contain;
-        }
-    }
-
-}
-
-.contacto{
-    display: flex;
-    padding-top: 215px;
-
-    &__img{
-        &--montse{
-            width: 35%;
-            margin-top: -100px;
-        }
-        &--icon{
-            height: 60px;
-            margin-right: 1rem;
-        }
-    }
-    
-    &__left{
-        width: 70%;
-
-        &_info{
-        
-            display: inline-flex;
-            &--text{
-                margin-left: 2rem;
-                margin-right: 4rem;
-                font-size: 1.6rem;
-                letter-spacing: 2px;
-            }
-
-            &--telf{
-                display: inline-flex;
-                margin-top: 1rem;
-                font-family: Arial;
-                font-size: 1.5rem;
-                color: $colorText;
-            }
-        }
-
-        &_adress{
-            margin-right: 3rem;
-            &--text{
-                font-family: Arial;
-                font-size: 1.1rem;
-                color: $colorText;
-            }
-            &--container{
-                display: inline-flex;
-                width: 100%;
-                justify-content: flex-end;
-                align-items: flex-end;
-            }
-            &--icon{
-                margin-left: 1rem;
-            }
-        }
-        
-    }
-
-    &__right{
-        width: 30%;
-        border: solid 4px $colorPrimary;
-        border-radius: 40px;
-        height: fit-content;
-        padding: 1.5rem;
-        margin-top: -2rem;
-
-        &--section{
-            width: 100%;
-
-            p{
-                font-size: 1.2rem;
-                margin-bottom: 1rem;
-                font-family: Arial;
-            }
-
-            &-title{
-                text-align: center;
-                font-family: Arial;
-                margin-bottom: 1rem;
-                display: inline-block;
-                font-size: 1.2rem;
-                color: $colorText;
-                width: 100%;
-            }
-            &-container-button{
-                display: flex;
-                justify-content: center;
-            }
-
-            &-button{
-                text-align: center;
-                padding: 10px 35px 10px 35px;
-                border-radius: 25px 25px 25px 25px;
-                border-width: 0;
-                font-weight: bold;
-                font-size: 0.8rem;
-                background-color: $colorPrimary;
-                color: white;
-                cursor: pointer;
-
-                &:hover{
-                    color: $colorText;
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 2000px) {
-    .header{
-        height: 285px;
-    }
-}
-
-#mapa {
-    width: 100%;
-    height: 500px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
+@import "styles/menu"; 
+@import "styles/home"; 
+@import "styles/galeria"; 
+@import "styles/quienes-somos"; 
+@import "styles/contacto"; 

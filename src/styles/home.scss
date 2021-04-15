@@ -1,0 +1,53 @@
+.home{
+    background-image: url(../assets/img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    &__text{
+        color: white;
+        margin-left: 5rem;
+        font-size: 3rem;
+        text-shadow: 0px 3px 2px rgb(0 0 0 / 50%);
+        padding-top: 12rem;
+        h1{
+            font-weight: normal;
+            cursor: default;
+        }
+    }
+
+    &__button{
+        padding: 10px 35px 10px 35px;
+        border-radius: 25px 25px 25px 25px;
+        border-width: 0;
+        font-weight: bold;
+        font-size: 0.8rem;
+        background-color: white;
+        color: $colorPrimary;
+        cursor: pointer;
+
+        &:hover{
+        background-color: $colorPrimary;
+        color: white ;
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .home{
+        &__text{
+            font-size: 2.3rem;
+            margin-left: 3rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 485px) {
+    .home{
+        &__text{
+            font-size: 1.8rem;
+            margin-left: 3rem;
+        }
+    }
+}

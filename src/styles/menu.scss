@@ -1,0 +1,136 @@
+
+
+.menu{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+
+    & :focus{
+        outline: none;
+    }
+
+    h3{
+        cursor: pointer;
+        font-weight: normal;
+        font-size: 1rem;
+        &.menu_left_selected{
+            font-weight: bold ;
+        }
+    
+    }
+
+    
+    &_links{
+        cursor: pointer;
+        width: 10%;
+        text-align: center;
+        img{
+            max-height: 15vh;
+        }
+    }
+
+    &_left{
+        display: inline-flex;
+        justify-content: space-around;
+        width: 45%;
+    }
+
+ 
+    &__right{
+        display: inline-flex;
+        width: 45%;
+        justify-content: center;
+        h3{
+            white-space: pre;
+            cursor: default;
+            display: inline-flex;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+    .menu{
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1rem;
+    
+        h3{
+            padding: 3px;
+            font-size: 0.8rem;
+        
+        }
+    
+        
+        &_links{
+            cursor: pointer;
+            width: 20%;
+            text-align: center;
+            img{
+                max-height: 12vh;
+            }
+        }
+    
+        &_left{
+            display: inline-flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+    
+     
+        &__right{
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 485px) {
+    .menu{
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1rem;
+    
+        & :focus{
+            outline: none;
+        }
+    
+        h3{
+            
+            font-size: 1rem;
+            padding: 3px;
+            &.menu_left_selected{
+                font-weight: bold ;
+            }
+        
+        }
+    
+        
+        &_links{
+            width: initial;
+            img{
+                max-height: 12vh;
+            }
+        }
+    
+        &_left{
+            display: initial;
+            justify-content: initial;
+            width: initial;
+        }
+    
+     
+        &__right{
+            display: none;
+        }
+    }
+    
+    
+}
