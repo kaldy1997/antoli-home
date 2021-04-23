@@ -26,7 +26,7 @@
         min-height: 100vh;
         background: rgba($colorPrimary,0.9);
         margin-left: -2rem;
-
+        z-index: 11;
         &--close{
             display: inline-flex;
             width: 100%;

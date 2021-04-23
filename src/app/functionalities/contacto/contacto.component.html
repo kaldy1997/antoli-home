@@ -23,8 +23,15 @@
 
         <div class="contacto__left_adress">
             <div class="contacto__left_adress--container">
-                <p class="contacto__left_adress--text">CARRER MARE DE DÉU D'AGRES, 2, 03837 AGRES, ALICANTE</p>
-                <img class="contacto__img--icon contacto__left_adress--icon" src="assets/img/ubicacion.png">
+                <button class="contacto__right--section-button" (click)="openMap()">ABRIR MAPA</button>
+               <div class="contacto__left_adress--container-text">
+                   <div>
+                       <p *ngIf="!isMobile" class="contacto__left_adress--text">CARRER MARE DE DÉU D'AGRES, 2,</p>
+                       <p *ngIf="!isMobile" class="contacto__left_adress--text"> 03837 AGRES, ALICANTE</p>
+                       <p *ngIf="isMobile" class="contacto__left_adress--text">CARRER MARE DE DÉU D'AGRES, 2, 03837 AGRES, ALICANTE</p>
+                    </div>
+                   <img class="contacto__img--icon contacto__left_adress--icon" src="assets/img/ubicacion.png">
+                </div> 
             </div>
             <div id="mapa"></div>
         </div>
