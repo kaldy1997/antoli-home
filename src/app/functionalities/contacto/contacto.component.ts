@@ -9,8 +9,7 @@ import { environment } from 'src/environments/environment';
 export class ContactoComponent implements OnInit {
 
   private mapa: Mapboxgl.Map;
-
-  private readonly COORDENADAS = [-0.5154, 38.77942];
+  private readonly COORDENADAS = [-0.5171, 38.78025];
 
   constructor() { }
 
@@ -33,6 +32,7 @@ export class ContactoComponent implements OnInit {
 
     new Mapboxgl.Marker().setLngLat(this.COORDENADAS).addTo(this.mapa);
     this.mapa.addControl(new Mapboxgl.NavigationControl());
+    this.mapa.addControl(new Mapboxgl.MapboxGeocoder(), 'top-left');
   }
 
 }
