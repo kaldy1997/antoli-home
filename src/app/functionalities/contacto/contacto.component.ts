@@ -17,7 +17,9 @@ export class ContactoComponent implements OnInit {
   private mapa: Mapboxgl.Map;
   private readonly COORDENADAS = [-0.5171, 38.78025];
   
-  constructor() { }
+  constructor() { 
+    this.isMobile = window.innerWidth < 900;
+  }
 
   ngOnInit(): void {
     this.setMap();
