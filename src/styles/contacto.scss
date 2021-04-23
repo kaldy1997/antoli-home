@@ -20,7 +20,8 @@
         
             display: inline-flex;
             &--text{
-                margin-left: 2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
                 font-size: 1.6rem;
             }
 
@@ -34,7 +35,7 @@
         }
 
         &_adress{
-            margin-right: 3rem;
+            margin-right: 1.5rem;
             &--text{
                 font-family: Arial;
                 font-size: 1.1rem;
@@ -43,8 +44,16 @@
             &--container{
                 display: inline-flex;
                 width: 100%;
-                justify-content: flex-end;
-                align-items: flex-end;
+                justify-content: space-between;
+                align-items: center;
+
+                &-text{
+                    display: inline-flex;
+                    align-items: center;
+                    text-align: right;
+                    justify-content: flex-end;
+                    width: 75%;
+                }
             }
             &--icon{
                 margin-left: 1rem;
@@ -109,7 +118,6 @@
     height: 500px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    z-index: -1;
 }
 
 
@@ -133,8 +141,8 @@
 
             &_info{
                 &--text{
-                    margin-left: 1rem;
-                    margin-right: 0;
+                    margin-left: 0.5rem;
+                    margin-right: 0.5;
                     font-size: 1.2rem;
                     letter-spacing: 2px;
                     width: 100%;
@@ -156,6 +164,13 @@
                     width: 100%;
                     align-items: initial;
                     margin-top: 1rem;
+                    flex-direction: column-reverse;
+
+                    &-text{
+                        width: 100%;
+                        justify-content: center;
+                        margin-bottom: 1rem;
+                    }
                 }
                 &--icon{
                     margin-left: 5px;
@@ -213,6 +228,9 @@
                     width: 100%;
                     align-items: initial;
                     margin-top: 1rem;
+                    flex-direction: column-reverse;
+
+                    
                 }
                 &--icon{
                     margin-left: 5px;
