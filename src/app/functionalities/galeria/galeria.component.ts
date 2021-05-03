@@ -25,7 +25,9 @@ export class GaleriaComponent implements OnInit {
       'assets/img/galeria_9.jpg',
       'assets/img/galeria_10.jpg',
       'assets/img/galeria_11.jpg',
-      'assets/img/galeria_12.jpg'
+      'assets/img/galeria_12.jpg',
+      'assets/img/galeria_13.jpg',
+      'assets/img/galeria_14.jpg'
     ];
   }
 
